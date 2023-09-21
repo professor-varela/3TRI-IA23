@@ -1,0 +1,17 @@
+.menu-hamburger {
+    --size: 5rem;
+    height: var(--size);
+    width: var(--size);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: calc(var(--size) / 5   );
+    cursor: pointer;
+    
+    & span {
+        display: block;
+        width: 100%;
+        height: calc(var(--size) / 14);
+        background-color: black;
+    }
+}

@@ -7,7 +7,7 @@
 }
 
 .menu-hamburger {
-    --_size: 5rem;
+    --_size: 1.6rem;
     height: var(--_size);
     width: var(--_size);
     display: flex;
@@ -18,7 +18,7 @@
     transition: left .25s;
     position: fixed;
     left: 1rem;
-    top: 1rem;
+    bottom: 1rem;
     z-index: 7;
 }
 
@@ -66,4 +66,30 @@
 
 .open-nav .main-menu {
     transform: translateX(0%);
+}
+
+/* ------------------------------- */
+
+html,
+body {
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+header {
+    border: 1px solid red;
+    height: 100px;
+}
+
+main {
+    border: 1px solid green;
+    min-height: calc(100dvh - 200px);
+}
+
+footer {
+    border: 1px solid blue;
+    height: 100px;
 }

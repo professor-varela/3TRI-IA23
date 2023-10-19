@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      padding: 1rem;
+      background-color: rgba(0 0 0 / .3);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="aaa">
+    A
+    <div id="bbb">
+      B
+      <div id="ccc">
+        C
+      </div>
+    </div>
+  </div>
+
+  <script>
+    aaa.addEventListener("click", () => console.log("A"), false)
+    bbb.addEventListener("click", () => console.log("B"), true)
+    ccc.addEventListener("click", () => console.log("C"), false)
+
+  </script>
+
+</body>
+
+</html>

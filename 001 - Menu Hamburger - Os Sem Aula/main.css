@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&family=Roboto:wght@300;700&display=swap');
+
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 1,
@@ -9,6 +11,8 @@
 
 * {
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 :root {
@@ -122,4 +126,62 @@ main {
 footer {
     border: 1px solid blue;
     height: 100px;
+}
+
+/* -------------------------- */
+
+dialog:modal {
+    --_alt-color: #dcdcdc; 
+    border: 2px solid black;
+    background-color: rgba(0 0 0 / .5);
+    backdrop-filter: blur(2.5px);
+    color: var(--_alt-color);
+    border-radius: 10px;
+    padding: 2rem;
+    font-size: 1.4rem;
+}
+
+dialog:modal h1 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+dialog:modal button {
+    border: 2px solid var(--_alt-color);
+    background-color: transparent;
+    color: var(--_alt-color);
+    font-size: 1.4rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: blueviolet;
+        z-index: -1;
+        transform: translateY(100%);
+        transition: .3s;
+    }
+
+    &:focus,
+    &:hover {
+        &::before {
+            transform: translateY(0%);
+        }   
+    }
+}
+
+dialog:modal .action {
+    display: flex;
+    justify-content: flex-end;
+    gap: .25rem
+}
+
+dialog:modal::backdrop {
+    backdrop-filter: blur(2.5px);
+    background-color: rgba(0 0 0 / .9);
 }
